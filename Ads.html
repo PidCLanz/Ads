@@ -1,0 +1,12 @@
+<style>#image-container{max-width:300px;margin:auto;position:relative;text-align:center}#image-container img{width:100%;height:auto;display:none;position:absolute;cursor:pointer}#image-container img.active{display:block;position:relative}</style>
+<div id="image-container">
+<img src="https://cdn.imgchest.com/files/g4z9cblg2e7.webp" alt="Spider gun" data-link="https://s.lazada.com.ph/s.Ph8Bz?cc" />
+<img src="https://cdn.imgchest.com/files/e4gdckagb24.webp" alt="Minecraft Happy birthday" data-link="https://s.lazada.com.ph/s.PhjaL?cc" />
+<img src="https://cdn.imgchest.com/files/my8xcbdzrg4.webp" alt="Minecraft Lego" data-link="https://s.lazada.com.ph/s.Phkvi?cc" />
+<img src="https://cdn.imgchest.com/files/345xcljbok7.webp" alt="Catapult aircraft gun" data-link="https://s.lazada.com.ph/s.Ph8DP?cc" />
+<img src="https://cdn.imgchest.com/files/84apcj2rmq4.webp" alt="Cashier toy" data-link="https://s.lazada.com.ph/s.Ph8Hw?cc" />
+<img src="https://cdn.imgchest.com/files/k46acjmr657.webp" alt="Youtube Channel" data-link="https://www.youtube.com/@Pidcheas" />
+<img src="https://cdn.imgchest.com/files/pyvdcj23l8y.webp" alt="Minecraft Keychain" data-link="https://s.lazada.com.ph/s.Phj1S?cc" />
+</div>
+<script>const images=document.querySelectorAll('#image-container img');let currentIndex=Math.floor(Math.random()*images.length);function rotateImage(){images[currentIndex].classList.remove('active');currentIndex=(currentIndex+1)%images.length;images[currentIndex].classList.add('active');}
+images.forEach(img=>{img.onclick=()=>window.location.href=img.getAttribute('data-link');});images[currentIndex].classList.add('active');setInterval(rotateImage,5000);</script>
